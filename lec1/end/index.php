@@ -493,7 +493,7 @@ $siteName = 'Oz Blog';
         <a href="#">Back to top</a>
       </p>
       <p class="mb-1">
-        <?= $siteName ?> all rights reserved @copy <?php echo date('Y') ?>
+        <?= $siteName ?> all rights reserved &copy; <?php echo date('Y') ?>
       </p>
       <p class="mb-0">
         New to Bootstrap? <a href="/">Visit the homepage</a> or read our
