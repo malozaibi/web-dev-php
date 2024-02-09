@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2024 at 04:58 PM
+-- Generation Time: Feb 09, 2024 at 01:43 PM
 -- Server version: 8.1.0
 -- PHP Version: 8.1.24
 
@@ -51,6 +51,30 @@ INSERT INTO `blogs` (`id`, `title`, `body`, `created_at`) VALUES
 (10, 'the title of the blog', 'the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog ', '2024-02-02 21:53:54'),
 (11, 'the title of the blog', 'the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog the body of the blog ', '2024-02-02 21:54:04');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int UNSIGNED NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `type`, `created_at`) VALUES
+(1, 'mohammed', 'm@m.com', 'm@m.com', 'user', '2024-02-07 18:23:00'),
+(2, 'teacher', 't@t.com', '123', 'admin', '2024-02-07 18:23:23'),
+(3, 'mohammed mohsin', 'mm@mm.com', 'lsksdjf;dkfja', 'user', '2024-02-07 21:46:23');
+
 --
 -- Indexes for dumped tables
 --
@@ -62,6 +86,12 @@ ALTER TABLE `blogs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -70,6 +100,12 @@ ALTER TABLE `blogs`
 --
 ALTER TABLE `blogs`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
