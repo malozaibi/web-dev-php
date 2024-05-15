@@ -35,7 +35,7 @@ if ($user_email && $pw) {
   <div class="col-md-6 mx-auto">
     <?php
     if ($_SESSION["logged"] ?? false) {
-      echo "<h1>" . $_SESSION['user']['name'] . " </h1>";
+      echo "<h1>" . $_SESSION['user']['name'] . " <img src='" . $_SESSION['user']['img_path'] . "' alt='User Image' style='width: 50px; height: auto;' /> </h1>";
     }
     ?>
     <form action="" method="post">
